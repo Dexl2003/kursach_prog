@@ -1,5 +1,6 @@
 
 using System.Collections;
+using System.Data;
 
 namespace kursach_prog
 {
@@ -10,7 +11,28 @@ namespace kursach_prog
         {
             InitializeComponent();
 
-           
+            List <String[]> list_string = DataBaseConnector.ExecuteQuery(4);
+
+            dataGridView1.Columns.Add("id","Артикул");
+            dataGridView1.Columns.Add("name", "Название");
+            dataGridView1.Columns.Add("quantity", "Количество");
+            dataGridView1.Columns.Add("price", "Цена");
+
+            //dataGridView1.DataSource = list_string.Select(x => new { Value = x }).ToList();
+            for (int i = 0; i < list_string.Count; i++)
+            { 
+                
+                dataGridView1.Rows.Add(list_string[i]);
+            }
+
+            
+
+
+
+
+
+
+
         }
 
 
