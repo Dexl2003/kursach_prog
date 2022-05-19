@@ -11,7 +11,7 @@ namespace kursach_prog
 {
     internal class DataBaseConnector
     {
-        public static string connectString = "server=localhost;database=cpjkurs;user=root;password=root;";
+        public static string connectString = "server=90.188.35.68;port=3306;database=cpjkurs;user=localAdmin;password=kFganyFun;";
 
         static string host = "localhost";
 

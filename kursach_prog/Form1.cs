@@ -21,7 +21,6 @@ namespace kursach_prog
             //dataGridView1.DataSource = list_string.Select(x => new { Value = x }).ToList();
             for (int i = 0; i < list_string.Count; i++)
             { 
-                
                 dataGridView1.Rows.Add(list_string[i]);
             }
 
